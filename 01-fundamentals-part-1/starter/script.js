@@ -218,49 +218,49 @@
 // }
 
 // Type Conversion and Coercion
-const inputYear = "1991";
-console.log(Number(inputYear), inputYear);
-console.log(Number(inputYear) + 18);
+// const inputYear = "1991";
+// console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear) + 18);
 
-console.log(Number("Jonas"));
-console.log(typeof NaN);
+// console.log(Number("Jonas"));
+// console.log(typeof NaN);
 
-console.log(String(23), 23);
-console.log(typeof String(23));
+// console.log(String(23), 23);
+// console.log(typeof String(23));
 
-// Automatic Type Coercion
-console.log("I am " + 23 + " years old");
-console.log("23" - "10" - 3);
-console.log("23" / "2");
-console.log("23" * "2");
+// // Automatic Type Coercion
+// console.log("I am " + 23 + " years old");
+// console.log("23" - "10" - 3);
+// console.log("23" / "2");
+// console.log("23" * "2");
 
-let n = "1" + 1;
-console.log(n);
+// let n = "1" + 1;
+// console.log(n);
 
-n = n - 1;
-console.log(n);
+// n = n - 1;
+// console.log(n);
 
 // type convertion = explicit/manual (recommend)
 // type coercion = implicit/automatic (javascript does itself)
 
 // Equality - Strict
 
-const age = '18';
-if (age === 18) console.log('You just became an adult (strict)');
-if (age == 18) console.log('You just became an adult :D (loose)');
+// const age = '18';
+// if (age === 18) console.log('You just became an adult (strict)');
+// if (age == 18) console.log('You just became an adult :D (loose)');
 
-console.log('18' === 18);
-console.log('18' == 18);
-console.log(18 === 18);
+// console.log('18' === 18);
+// console.log('18' == 18);
+// console.log(18 === 18);
 
-// why == can be dangerous
-console.log('0' == 18);
-console.log(0 == false);
-console.log('0' == false);
-console.log(null == undefined); //special case
+// // why == can be dangerous
+// console.log('0' == 18);
+// console.log(0 == false);
+// console.log('0' == false);
+// console.log(null == undefined); //special case
 
-console.log('' == 0);
-console.log('   ' == 0);
+// console.log('' == 0);
+// console.log('   ' == 0);
 
 // best practice
 //const favorite = Number(prompt("What's your favorite number?"));
@@ -281,12 +281,71 @@ console.log('   ' == 0);
 
 // Logical Operators
 
-const hasDriversLicense = false; // A
-const hasGoodVision = false; // B
+// const hasDriversLicense = false; // A
+// const hasGoodVision = false; // B
 
-console.log('AND OPERATOR: ${hasDriversLicense && hasGoodVision}');
-console.log('OR OPERATOR: ${hasDriversLicense || hasGoodVision}');
-console.log('NOT OPERATOR: ${!hasDriversLicense}');
+// console.log('AND OPERATOR: ${hasDriversLicense && hasGoodVision}');
+// console.log('OR OPERATOR: ${hasDriversLicense || hasGoodVision}');
+// console.log('NOT OPERATOR: ${!hasDriversLicense}');
 
-const isTired = true; // C
-console.log(hasDriversLicense && hasGoodVision && !isTired);
+// const isTired = true; // C
+// console.log(hasDriversLicense && hasGoodVision && !isTired);
+
+// if (hasDriversLicense && hasGoodVision || !isTired) {
+//     console.log('Aiken is able to drive!');
+// } else {
+//     console.log('Someone else should drive...');
+// }
+
+// // More complex scenarios
+// age = 20;
+// const hasPermission = true;
+// const hasExperience = false;
+
+// if (age >= 18 || hasPermission && hasExperience) {
+//     console.log('Approved to drive');
+// } else {
+//     console.log('Not approved to drive');
+// }
+
+// // Test with different values
+// console.log{
+//     "Age 20, permission true, experience false:",
+//     (age >= 18 || hasPermission && hasExperience)
+// };
+
+// // Ternary Operator
+
+// const age = 17;
+
+// // basic ternary condition ? valueifTrue : valueifFalse
+// const drink = age >= 18 ? 'wine' : 'water';
+// console.log(drink);
+
+// let drink2;
+// if (age >= 18) {    
+//     drink = 'wine';
+// } else {
+//     drink2 = 'water';
+// } 
+// console.log(drink2);
+
+// console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
+
+// Coding Challenge #3
+
+const bill = 275; // Test with 275, 40, and 430
+
+// Step 1: Create the tip calculation using ternary operator
+// Rule: 15% if between 50-300, otherwise 20%
+// Hint: bill >= 50 && bill <= 300
+
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill *0.2 // Your ternary operator here
+
+// Step 2: Create beautiful output with template literal
+console.log(`The bill was ${bill}, the tip ${tip}, and the total value ${bill + tip}`); // Your template literal here);
+
+// Expected outputs:
+// Bill 275: "The bill was 275, the tip was 41.25, and the total value 316.25"
+// Bill 40:  "The bill was 40, the tip was 8, and the total value 48"
+// Bill 430: "The bill was 430, the tip was 86, and the total value 516"

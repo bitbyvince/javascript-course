@@ -31,3 +31,36 @@ const language = "Filipino";
  
 age = 25;
 age = 26;
+
+// good variable name
+// let firstName
+// let myCurrentJob
+// const PI
+ 
+// bad name
+// let 3years
+// let jonas&matilda
+// let now
+ 
+console.log("=== DATA TYPES ===");
+ 
+// Number
+let id = 12345;
+console.log(id);
+console.log(typeof id);
+ 
+// String
+let lastName = "Doe";
+console.log(lastName);
+console.log(typeof lastName);
+
+let dynamicVariable = 40;
+console.log(dynamicVariable, typeof dynamicVariable)
+ 
+// change to a String
+dynamicVariable = "I am now a string!";
+console.log(dynamicVariable, typeof dynamicVariable)
+ 
+//change to a Boolean
+dynamicVariable = true;
+console.log(dynamicVariable, typeof dynamicVariable)

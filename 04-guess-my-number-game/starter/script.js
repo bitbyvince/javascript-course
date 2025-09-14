@@ -122,7 +122,7 @@ window.addEventListener('keydown', function (e) {
   }
 });
 
-// Focus input on restart
+//Focus input on restart
 againBtnEl.addEventListener('click', function () {
   guessInputEl.focus();
 });
